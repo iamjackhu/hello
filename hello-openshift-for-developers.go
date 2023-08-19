@@ -4,7 +4,6 @@ import (
   "fmt"
   "net/http"
   "os"
-  "log"
 )
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
@@ -17,7 +16,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
   fmt.Println("Servicing an impatient beginner's request.")
 }
 
-func main() {
-	http.HandleFunc("/", helloHandler)
-	log.Fatal(http.ListenAndServe(":8080", nil))
-}
+// func main() {
+// 	http.HandleFunc("/", helloHandler)
+// 	log.Fatal(http.ListenAndServe(":8080", nil))
+// }
